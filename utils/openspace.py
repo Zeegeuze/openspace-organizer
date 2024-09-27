@@ -74,4 +74,4 @@ class Openspace:
             index=column_names
         )
 
-        df.to_csv(f'{filename}.csv')
+        df.to_csv(f'openspace-organizer/{filename}.csv')

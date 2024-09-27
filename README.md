@@ -16,10 +16,8 @@ This script runs everyday to re-assign everybody to a new seat.
 │   └── file_utils.py
 ├── main.py
 ├── new_colleagues.csv
-├── output.csv
-├── README.md
-|
-new_table_chart.csv
+├── new_table_chart.csv
+└── README.md
 ```
 
 ## Usage
