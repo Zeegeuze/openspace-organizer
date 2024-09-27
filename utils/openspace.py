@@ -4,6 +4,9 @@ import pandas as pd
 
 class Openspace:
     def __init__(self, tables):
+        '''
+        Will create an Openspace object.
+        '''
         self.tables = tables
         self.number_of_tables = len(tables)
 
@@ -11,6 +14,9 @@ class Openspace:
         return f'{self.tables},{self.number_of_tables}'
 
     def organize(self, names):
+        '''
+        Will randomly assign people to the available chairs. If there are too many people, it will inform who didn't get a chair.
+        '''
         random.shuffle(names)
         index_colleague = 0
 
@@ -32,6 +38,9 @@ class Openspace:
 
 
     def display(self):
+        '''
+        It will give an overview of all tables, give the names of the people sitting at that table and indicate if there are still free spots available at a table.
+        '''
         count = 1
         for table in self.tables:
             people_at_table = [chair.occupant for chair in table.seats]
@@ -48,6 +57,9 @@ class Openspace:
 
 
     def store(self, filename):
+        '''
+        This will store the seating plan in a csv file. Please not this is excluding the people that don't have a seat.
+        '''
         column_names = []
         names = []
         count = 1
