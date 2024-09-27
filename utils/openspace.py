@@ -2,13 +2,17 @@ import random
 from table import *
 import pandas as pd
 
-class Openspace:
+class Openspace():
+    instances = []
+
     def __init__(self, tables):
         '''
         Will create an Openspace object.
         '''
         self.tables = tables
         self.number_of_tables = len(tables)
+        self.instances.append(self)
+        # print(self.__class__.instances)
 
     def __str__(self):
         return f'{self.tables},{self.number_of_tables}'
@@ -22,10 +26,16 @@ class Openspace:
 
         for table in self.tables:
             while table.has_free_spot():
-                table.assign_seat(names[index_colleague])
+                print(index_colleague, len(names))
 
-                index_colleague += 1
+                if index_colleague < len(names):
+                    table.assign_seat(names[index_colleague])
 
+                    index_colleague += 1
+
+                else:
+                    print("Everybody seeted.")
+                    break
             else:
                 print("No free spot found any more")
 
@@ -75,3 +85,7 @@ class Openspace:
         )
 
         df.to_csv(f'openspace-organizer/{filename}.csv')
+
+    @classmethod
+    def get_instances(self):
+        return self.instances

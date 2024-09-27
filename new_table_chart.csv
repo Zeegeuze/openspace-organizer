@@ -1,7 +1,5 @@
-,0,1,2,3
-Table 1,Ihor,Kevin,Urson,Kelli
-Table 2,Dhrisya,Rik,Petra,Soha
-Table 3,Nicolaas,Zelimkhan,Wouter,Yusra
-Table 4,Muntadher,Levin,Moustafa,Anastasiia
-Table 5,Minh Duc,Adheeba,Maarten,Veena
-Table 6,Yeliz,Basma,Tom,Rasmita
+,0,1,2,3,4,5
+Table 1,Majid,Levin,Wouter,Petra,Kevin,Rik
+Table 2,Kelli,Rasmita,Izabela,Ihor,Adheeba,Maarten
+Table 3,Muntadher,Yusra,Tom,Zelimkhan,Nicolaas,Yeliz
+Table 4,Moustafa,Soha,Dhrisya,Veena,Anastasiia,Minh Duc

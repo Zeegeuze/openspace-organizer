@@ -1,7 +1,6 @@
 import sys
 import os
 import csv
-import random
 
 sys.path.append(os.path.abspath("openspace-organizer/utils"))
 
@@ -78,6 +77,11 @@ if new_floorplan == True:
     # store in excel
     open_space.store("new_table_chart")
 
-# else:
-#     # Needs to be added later
-#     pass
+else:
+    print("Sorry, we don't support that yet")
+#     # get extra persons
+
+#     extra_persons_input = input("Please put the extra persons you want to seat, separated by a comma")
+#     extra_persons = list(extra_persons_input.split(', '))
+
+#     open_space.organize(extra_persons)
